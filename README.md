@@ -6,13 +6,11 @@ with `shadow` plugin integrated. Tested flawlessly on `IntelliJ IDEA Ultimate 20
 <hr>
 
 ```js
-java: 8
-gradle: 3.0
-shadow: 2.0
-.4
-minecraft: 1.8
-.9
-forgegradle: 2.1 - SNAPSHOT
+       java   8
+     gradle   3.0
+     shadow   2.0.4
+  minecraft   1.8.9
+forgegradle   2.1-SNAPSHOT
 ```
 
 ## Setup
