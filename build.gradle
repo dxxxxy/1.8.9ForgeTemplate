@@ -63,7 +63,7 @@ processResources {
         //replace version and mcversion
         expand "version":project.version, "mcversion":project.minecraft.version
     }
-        
+
     //copy everything else, that"s not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude "mcmod.info"
@@ -71,19 +71,16 @@ processResources {
 }
 
 shadowJar {
-    //go over each dependency that uses "shade" configuration and include it in the shadow jar
     dependencies {
-        project.configurations.shade.resolvedConfiguration.getFirstLevelModuleDependencies().each {
-            include(dependency(it.toString().replace(";default", "")))
-        }
+        //we remove gson because it belongs to the public api and will break shading
+        //exclude(dependency("com.google.code.gson:gson:2.8.6"))
     }
-    duplicatesStrategy DuplicatesStrategy.EXCLUDE
+    configurations = [project.configurations.shade]
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE //prevent duplicates
     classifier "" //prevent creation of unshadowed jar
 }
 
-//reobf will throw error if 0 shadowed libraries
-if (project.configurations.shade.resolvedConfiguration.getFirstLevelModuleDependencies().size() > 0)
 reobf {
     //reobfuscate the shadowed jar
-    shadowJar {} 
+    shadowJar {}
 }
