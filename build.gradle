@@ -20,6 +20,7 @@ group = "dreamys.studio" //http://maven.apache.org/guides/mini/guide-naming-conv
 archivesBaseName = "examplemod" //name of the output jar
 
 sourceCompatibility = targetCompatibility = 1.8 //using java 8
+compileJava.options.encoding = "UTF-8"
 
 minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
@@ -36,19 +37,19 @@ configurations {
 repositories {
     //repos for libraries (not gradle plugins)
     //example:
-    //maven { url "https://repo.hypixel.net/repository/Hypixel" }
+    //maven { url "https://repo.dreamys.studio/" }
 }
 
 dependencies {
     //shade will bundle your library to the output jar
     //your libraries will be accessible outside of intellij
     //example:
-    //shade "net.hypixel:hypixel-api-transport-apache:4.1"
+    //shade "studio.dreamys:libSkyblock:1.1.1"
 
     //compile will make your library available only in this dev environment
     //your libraries wont be accessible outside of intellij
     //example:
-    //compile "net.hypixel:hypixel-api-transport-apache:4.1"
+    //compile "studio.dreamys:libSkyblock:1.1.1"
 }
 
 processResources {
