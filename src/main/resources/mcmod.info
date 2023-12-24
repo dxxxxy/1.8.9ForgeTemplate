@@ -1,16 +1,19 @@
 [
-{
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude", "dxxxxy"],
-  "credits": "The Forge and FML guys, for making this example. dxxxxy for fixing it.",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "um",
+    "name": "um Example mod",
+    "description": "This is an updated template to include proxy boilerplate code..",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "um",
+      "dxxxxy"
+    ],
+    "credits": "dxxxxy for creating the first template, um for updating..",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]
