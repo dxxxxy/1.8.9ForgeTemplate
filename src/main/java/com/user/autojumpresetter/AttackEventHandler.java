@@ -26,7 +26,7 @@ public class AttackEventHandler {
         }
 
         // Condition 2: The damage source is another player
-        if (!event.source.isPlayerDamage()) {
+        if (!(event.source.getTrueSource() instanceof EntityPlayer)) {
             return;
         }
 
