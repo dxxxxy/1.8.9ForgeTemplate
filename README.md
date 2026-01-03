@@ -1,3 +1,6 @@
+> [!WARNING]
+> This template is no longer valid/working as everything it runs on has been deprecated and/or removed (IntelliJ dropped support for Gradle < 4.5, Forge removed its built jars from the repo, etc). Use an architectury-loom based template instead.
+
 # 1.8.9ForgeTemplate
 
 A fixed and ready to use template for minecraft forge modding on `1.8.9`
